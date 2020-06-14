@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>   
+        <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- <link href='..\css\font.css' rel='stylesheet' type='text/css'> -->
+        <link href='..\css\post.css' rel='stylesheet' type='text/css'>
+        <link href='..\css\header.css' rel='stylesheet' type='text/css'>
+</head>
+<body>    
+        <div class="header">
+            <button id ="topButtons1" >Sign Up</button>
+            <button id ="topButtons2" >Sign In</button>
+            <a id="pageTitle" class="logo-title">ScriBBler</a>
+            <p class="middleText">Explore Imagine Create</p>
+        </div>
 
+    <div class="blogContent">
+        <div id="blogTitle" class="blogTite">
+        <h3 id="blogTitleNew" contenteditable="false" style="font-family: 'Bodoni MT'">
+            Everything you should know about ‘module’ & ‘require’ in Node.js</h3>
+    </div>
+
+<div class="blogAuthor">
+
+    <!-- Insert code for Edit/Save button and  -->
+    <button id = "edit-save" onclick="EditSaveClicked()">Edit &#x270D;</button>
+
+    <p class="blogText" style = " font-family: 'French Script MT';">Srishti Gupta</p>
+</div>
+
+<div class="blogText">
+    <p id="blogBody" contenteditable="false" >
+            Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz. The function wrapper for the circle module will look like the one given below: You can see that there is a function wrapper at the root level encompassing all the code written inside the circle module. The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function.
+    </p>
+</div>
+
+    <!-- Insert code for Like button, Comment button, Comment box here-->
+    <div id = "footer-buttons">
+        <button id="like-press" onclick="incLikes()">
+              <span>&#128077; Like</span>  
+        </button><br>
+        <p id = "like-number-update">Be the first one to like this !!</p><br>
+        <textarea id="text-area" rows="6" cols="90" placeholder="Leave a comment..." style="color:black">
+        </textarea><br>
+        <button id ="comment-press" onclick="AddComment()">Comment</button>
+    </div>
+<div id="myModal" class="modal">                  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+      <h1>Get Started</h1>
+      <hr class = "hr-Shade">
+      <form class = "form-style">
+      <label>Full Name</label><br>
+      <input type="text" placeholder="Enter Full Name" required>      <br>           
+      <label>Username</label><br>
+      <input type="text" placeholder="Enter Username" required><br>                
+      <label>Password </label><br>
+      <input type="password" placeholder="Enter Password" required><br>                  
+      <label>Confirm Password</label><br>
+      <input type="password" placeholder="Confirm Password" required><br>                 
+      <button class = "Sign-Up-Button">Sign Up</button>
+      </form>       
+    </p>
+  </div>
+</div>
+          <!-- For Sign In -->
+<div id="myModal2" class="modal">                  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+      <h1>Welcome Back</h1>
+      <hr class = "hr-Shade">
+      <form class = "form-style">   
+        <label>Username</label>
+        <input type="text" placeholder="Enter Username" required>
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" required>
+      <button class = "Sign-Up-Button">Sign In</button><br>
+      Not a member ? <a id = "linking">Sign Up</a>
+      </form>       
+    </p>
+  </div>
+</div>
+<div id = "addedComments"></div>
+ <script src = "../js/post.js"></script>
+</body>
